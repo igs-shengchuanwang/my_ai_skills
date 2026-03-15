@@ -13,14 +13,20 @@ Extract specific frames from a GIF file so Claude can see and analyze them visua
 2. Read the extracted PNGs with the Read tool (which supports viewing images)
 3. Analyze the frames based on whatever the user is asking about
 
-## Frame Extraction Script
+## Finding the Script
 
-The script is at: `E:\Work\old_rd2\JR3DViewer_ccdev\.claude\skills\gif-analyze\scripts\extract_frames.py`
+Use the Glob tool to locate the script at runtime (do NOT hardcode paths):
+
+```
+**/.claude/skills/gif-analyze/scripts/extract_frames.py
+```
+
+## Frame Extraction Script
 
 ### Usage
 
 ```bash
-python "E:\Work\old_rd2\JR3DViewer_ccdev\.claude\skills\gif-analyze\scripts\extract_frames.py" <gif_path> [options]
+python <script_path> <gif_path> [options]
 ```
 
 ### Options
@@ -29,12 +35,12 @@ There are two modes for selecting frames. Pick whichever matches the user's requ
 
 **Mode 1: By frame indices**
 ```bash
-python "E:\Work\old_rd2\JR3DViewer_ccdev\.claude\skills\gif-analyze\scripts\extract_frames.py" animation.gif --frames 0 5 10 20
+python <script_path> animation.gif --frames 0 5 10 20
 ```
 
 **Mode 2: By time range (seconds)**
 ```bash
-python "E:\Work\old_rd2\JR3DViewer_ccdev\.claude\skills\gif-analyze\scripts\extract_frames.py" animation.gif --time-start 1.0 --time-end 3.5 --sample-count 5
+python <script_path> animation.gif --time-start 1.0 --time-end 3.5 --sample-count 5
 ```
 This extracts `--sample-count` frames evenly spaced within the time window. Defaults to 5 if omitted.
 
