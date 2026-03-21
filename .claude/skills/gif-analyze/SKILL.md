@@ -59,10 +59,10 @@ The script prints JSON to stdout:
   "duration_seconds": 2.4,
   "fps": 20.0,
   "size": [320, 240],
-  "output_dir": "/tmp/gif-frames-xxxxx",
+  "output_dir": "<temp_dir>/gif-frames-xxxxx",
   "extracted_frames": [
-    {"index": 0, "time_seconds": 0.0, "path": "/tmp/gif-frames-xxxxx/frame_000.png"},
-    {"index": 5, "time_seconds": 0.25, "path": "/tmp/gif-frames-xxxxx/frame_005.png"}
+    {"index": 0, "time_seconds": 0.0, "path": "<temp_dir>/gif-frames-xxxxx/frame_000.png"},
+    {"index": 5, "time_seconds": 0.25, "path": "<temp_dir>/gif-frames-xxxxx/frame_005.png"}
   ]
 }
 ```

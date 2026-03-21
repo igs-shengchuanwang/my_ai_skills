@@ -66,9 +66,9 @@ python <script_path> video.mp4 --keyframes --sample-count 10
   "resolution": [1920, 1080],
   "codec": "h264",
   "has_audio": true,
-  "output_dir": "/tmp/video-frames-xxxxx",
+  "output_dir": "<temp_dir>/video-frames-xxxxx",
   "extracted_frames": [
-    {"index": 0, "time_seconds": 0.0, "path": "/tmp/video-frames-xxxxx/frame_000000.png"}
+    {"index": 0, "time_seconds": 0.0, "path": "<temp_dir>/video-frames-xxxxx/frame_000000.png"}
   ]
 }
 ```
@@ -114,8 +114,8 @@ python <script_path> video.mp4 --waveform --transcribe --model small
   "sample_rate": 44100,
   "channels": 2,
   "bitrate": "128k",
-  "output_dir": "/tmp/video-audio-xxxxx",
-  "waveform_path": "/tmp/video-audio-xxxxx/waveform.png",
+  "output_dir": "<temp_dir>/video-audio-xxxxx",
+  "waveform_path": "<temp_dir>/video-audio-xxxxx/waveform.png",
   "transcript": "Hello, welcome to this video...",
   "segments": [
     {"start": 0.0, "end": 2.5, "text": "Hello, welcome to this video."}
