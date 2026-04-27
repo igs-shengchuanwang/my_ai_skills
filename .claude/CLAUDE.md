@@ -6,6 +6,13 @@
 - 不可自行假設簡化用法，需確認文件或 source 依據
 - 查不到確切依據時**必須明確告知使用者「無法查證」**，不可直接給出未經驗證的程式碼
 
+### Cocos Creator 編譯除錯
+- **編譯器差異**：Cocos 3.8 packer-driver 使用 **Babel parser**，比 IDE 的 TypeScript Language Server (tsc) 嚴格。常見差異：
+  - enum 成員間逗號 Babel 視為必要，tsc 容忍省略
+  - IDE 顯示語法 OK 不代表 Cocos 能編譯
+- **錯誤訊息位置**：Cocos 編譯失敗時，Console 面板只顯示下游的 `Script missing` 假象，**真正的 SyntaxError 在** `temp/programming/packer-driver/logs/debug.log`
+- **除錯流程**：遇到 `Script missing` 不要直接相信表面錯誤訊息，先去看 packer-driver `debug.log` 找根因
+
 ## Claude Code 相關規範
 - **永遠從官方文件網站開始查詢**：https://code.claude.com/docs/en/overview
 - 不可自行假設簡化用法，需確認文件或 source 依據
