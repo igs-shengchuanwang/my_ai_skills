@@ -1,5 +1,7 @@
 # Global Claude Code Rules
 
+回答最高原則：盡可能簡潔，簡短說重點
+
 ## Cocos Creator 相關規範
 - **永遠從官方文件網站開始查詢**：https://docs.cocos.com/creator/3.8/manual/zh/
 - **如要考慮底層實現需參考請看 engine repo**：https://github.com/cocos/cocos-engine
